@@ -13,9 +13,9 @@ public class TestPersonne {
 		p1.prenom = "Marc";
 		p1.adresse_postale = new AdressePostale();
 		
-		p1.adresse_postale.numero_de_rue = 10;
-		p1.adresse_postale.libellé_de_la_rue = "rue de java";
-		p1.adresse_postale.code_postal = 54400;
+		p1.adresse_postale.numeroDeRue = 10;
+		p1.adresse_postale.libelleDeLaRue = "rue de java";
+		p1.adresse_postale.codePostal = 54400;
 		p1.adresse_postale.ville = "Longwy";
 		
 
