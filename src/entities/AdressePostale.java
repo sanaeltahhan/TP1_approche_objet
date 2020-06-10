@@ -15,6 +15,9 @@ public class AdressePostale {
 		this.ville = ville;
 	}
 	
-	
+	public String toString() {
+	    return " adresse : " + numeroDeRue + " " + libelleDeLaRue + " " + codePostal + " " + ville ;
+	}
+
 
 }
