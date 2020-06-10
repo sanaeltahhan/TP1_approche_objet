@@ -44,6 +44,7 @@ public class Personne {
 		return nom;
 	}
 
+	//Autre methode pour modif nom
 	public void setNom(String nom) {
 		this.nom = nom;
 	}

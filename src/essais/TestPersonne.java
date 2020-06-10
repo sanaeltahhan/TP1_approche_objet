@@ -19,6 +19,10 @@ public class TestPersonne {
 		p2.changeNom("nouveau");
 		System.out.println(p2);
 		
+		//autre methode pour modif nom
+		p2.setNom("Durant");
+		System.out.println(p2);
+		
 		//Dans la classe Personne, ajoutez une méthode similaire pour modifier le prénom.
 		p2.changePrenom("LisaNew");
 		System.out.println(p2);
