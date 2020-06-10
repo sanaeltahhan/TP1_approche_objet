@@ -20,7 +20,7 @@ public class Personne {
 	}
 	
 	public String toString() {
-	    return prenom + " " + nom.toUpperCase() + " " + adressePostale;
+	    return prenom + " " + nom.toUpperCase() + ", " + adressePostale;
 	}
 	
 	public String changeNom(String nom) {
