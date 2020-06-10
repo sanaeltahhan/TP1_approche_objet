@@ -1,5 +1,7 @@
 package utils;
 
+import static java.lang.Integer.max;
+
 public class ConversionNombre {
 
 	public static void main(String[] args) {
@@ -11,7 +13,8 @@ public class ConversionNombre {
 		int a = 15;
 		int b = 23;
 		
-		int max = Integer.max(a, b);	
+		int max = max(a, b);
+		// int max = Integer.max(a, b);
 		
 		System.out.println(max);
 		
