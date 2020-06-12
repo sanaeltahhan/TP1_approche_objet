@@ -5,8 +5,17 @@ import java.util.Arrays;
 import entities.Personne;
 import fr.diginamic.banque.entites.Compte;
 
+/**
+ * Classe ManipulationChaine pour manipuler des chaines de caracteres
+ * @author eltahhansana
+ *
+ */
 public class ManipulationChaine {
 
+	/**
+	 * Point d'entrée
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		String chaine = "Durand;Marcel;012543;1 523.5";
