@@ -2,6 +2,7 @@ package tri;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class TestTriPays {
@@ -22,10 +23,25 @@ public class TestTriPays {
 		list.add(new Pays("Russie", 126_434_660, 27900));
 		list.add(new Pays("Inde", 1_386_249_417, 5174));
 		
-		// Tri de la liste
+		// Tri de la liste par nbr habitant
 		Collections.sort(list);
 		
 		System.out.println(list);
+		
+		// Saut de ligne
+		System.out.println();
+		
+		// Tri de la liste avec les ComparatorPibGabitant
+		Collections.sort(list, new ComparatorHabitant());
+		System.out.println("Fait avec ComparatorHabitant : " + list);
+		
+		// Saut de ligne
+		System.out.println();
+		
+		// Tri de la liste avec les ComparatorPibGabitant
+		Collections.sort(list, new ComparatorPibHabitant());
+		System.out.println("Fait avec ComparatorPibHabitant : " + list);
+
 	}
 
 }
