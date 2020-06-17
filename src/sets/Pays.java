@@ -22,7 +22,7 @@ public class Pays {
 
 	@Override
 	public String toString() {
-		return "nom=" + nom + ", nbrHabitant=" + nbrHabitant + ", pib=" + pib ;
+		return nom + ", nbrHabitant: " + nbrHabitant + ", pib: " + pib ;
 	}
 
 
