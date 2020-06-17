@@ -53,10 +53,9 @@ public class Pays implements Comparable<Pays> {
 
 
 
-	// Implémentez la méthode compareTo de manière à ce que le tri se fasse sur le nom de pays (par ordre alphabétique)
-	@Override
+	// Modifiez la classe Pays afin que désormais le tri se fasse sur le PIB/hab.
 	public int compareTo(Pays pays) {
-		int result = this.nom.compareTo(pays.getNom());
+		int result = this.nbrHabitant - pays.getNbrHabitant();
 		return result;
 	}
 	
