@@ -29,6 +29,9 @@ public class FusionMap {
 			
 		}
 		
+		// Ou deuxieme methode
+		//map3.putAll(map1);
+		
 		// Deuxieme iterator pour ajouter les element de map2 dans map3
 		Iterator <Integer> iter2 = map2.keySet().iterator();
 		while(iter2.hasNext()) {
