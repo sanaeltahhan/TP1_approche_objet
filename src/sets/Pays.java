@@ -3,18 +3,18 @@ package sets;
 public class Pays {
 	
 	private String nom;
-	private int nbrHabitan;
+	private int nbrHabitant;
 	private double pib;
 	
 	/** Constructeur
 	 * @param nom
-	 * @param nbrHabitan
+	 * @param nbrHabitant
 	 * @param pib
 	 */
-	public Pays(String nom, int nbrHabitan, double pib) {
+	public Pays(String nom, int nbrHabitant, double pib) {
 		super();
 		this.nom = nom;
-		this.nbrHabitan = nbrHabitan;
+		this.nbrHabitant = nbrHabitant;
 		this.pib = pib;
 	}
 	
@@ -22,7 +22,7 @@ public class Pays {
 
 	@Override
 	public String toString() {
-		return "nom=" + nom + ", nbrHabitan=" + nbrHabitan + ", pib=" + pib ;
+		return "nom=" + nom + ", nbrHabitant=" + nbrHabitant + ", pib=" + pib ;
 	}
 
 
@@ -35,12 +35,12 @@ public class Pays {
 		this.nom = nom;
 	}
 
-	public int getNbrHabitan() {
-		return nbrHabitan;
+	public int getNbrHabitant() {
+		return nbrHabitant;
 	}
 
-	public void setNbrHabitan(int nbrHabitan) {
-		this.nbrHabitan = nbrHabitan;
+	public void setNbrHabitant(int nbrHabitant) {
+		this.nbrHabitant = nbrHabitant;
 	}
 
 	public double getPib() {

@@ -3,12 +3,19 @@ package sets;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Classe de test pour la classe Test
+ * @author eltahhansana
+ *
+ */
 public class TestPays {
 
 	public static void main(String[] args) {
 		
+		// Initialisation d'un Set
 		Set<Pays> set = new HashSet<>();
 		
+		// Remplissage du Set
 		set.add(new Pays("USA", 328_239_523, 62606));
 		set.add(new Pays("France", 69_861_344, 43551));
 		set.add(new Pays("Allemagne", 82_801_531, 50206));
@@ -38,24 +45,24 @@ public class TestPays {
 		// Recherchez le pays avec le PIB total le plus important
 		Pays paysPibTotal = set.iterator().next();
 		for (Pays element : set) {
-			if (element.getPib() * element.getNbrHabitan() > paysPibTotal.getPib() * paysPibTotal.getNbrHabitan()) {
+			if (element.getPib() * element.getNbrHabitant() > paysPibTotal.getPib() * paysPibTotal.getNbrHabitant()) {
 				paysPibTotal = element;
 			}
 		}
 		System.out.println();
 
-		System.out.println("Le pays avec le PIB total le plus important est : " + paysPibTotal + ", il est de " + paysPibTotal.getPib() * paysPibTotal.getNbrHabitan());
+		System.out.println("Le pays avec le PIB total le plus important est : " + paysPibTotal + ", il est de " + paysPibTotal.getPib() * paysPibTotal.getNbrHabitant());
 
 		// Modifiez le contenu du HashSet pour mettre en majuscule le pays qui a le PIB total le plus petit
 		Pays paysPibTotalMin = set.iterator().next();
 		for (Pays element : set) {
-			if (element.getPib() * element.getNbrHabitan() < paysPibTotalMin.getPib() * paysPibTotalMin.getNbrHabitan()) {
+			if (element.getPib() * element.getNbrHabitant() < paysPibTotalMin.getPib() * paysPibTotalMin.getNbrHabitant()) {
 				paysPibTotalMin = element;
 			}
 		}
 		
 		System.out.println();
-		System.out.println("Le pays ayant le PIB total le plus faible est : " + paysPibTotalMin.getNom() + ", avec " + paysPibTotalMin.getPib() * paysPibTotalMin.getNbrHabitan());
+		System.out.println("Le pays ayant le PIB total le plus faible est : " + paysPibTotalMin.getNom() + ", avec " + paysPibTotalMin.getPib() * paysPibTotalMin.getNbrHabitant());
 		
 		System.out.println();
 		
