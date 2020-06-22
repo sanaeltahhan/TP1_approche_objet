@@ -17,9 +17,12 @@ import java.util.Scanner;
 public class Recherche10VillePlusPeupleeDepartementService extends MenuService {
 
 	@Override
-	public void traiter(Recensement recensement, Scanner scanner) {
+	public void traiter(Recensement recensement, Scanner scanner) throws ClasseException {
 		
 		System.out.println("Quel est le numéro de département dont vous souhaitez avoir les 10 villes les plus peuplées ? ");
+		
+		// Initialisation Boolean pour lancer une exception si l'utilisateur donne departement inconnu
+		boolean trouve = false;
 		
 		// Recupérer le choix de l'utilisateur
 		String choix = scanner.nextLine();
@@ -29,7 +32,12 @@ public class Recherche10VillePlusPeupleeDepartementService extends MenuService {
 		for (Ville ville : recensement.getListVilles()) {
 			if (ville.getCodeDepartement().equalsIgnoreCase(choix)) {
 				listVilleDepartement.add(ville);
+				trouve = true;
 			}
+		}
+		
+		if (! trouve) {
+			throw new ClasseException("Le numero de département que vous avez saisie est incorrect");
 		}
 		
 		// Tri de la liste par ordre décroissant des villes les plus peuplées

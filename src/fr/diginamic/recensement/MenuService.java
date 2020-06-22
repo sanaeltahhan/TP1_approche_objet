@@ -2,6 +2,8 @@ package fr.diginamic.recensement;
 
 import java.util.Scanner;
 
+import fr.diginamic.recensement.ClasseException;
+
 /**
  * Classe mère MenuService 
  * 
@@ -14,6 +16,6 @@ public abstract class MenuService {
 	 * @param recensement lignes du fichier
 	 * @param scanner scanner
 	 */
-	public abstract void traiter (Recensement recensement, Scanner scanner);
+	public abstract void traiter (Recensement recensement, Scanner scanner) throws ClasseException;
 
 }

@@ -52,15 +52,30 @@ public class Application {
 			switch (choix) {
 			case 1:
 				RecherchePopulationVilleService rechercheVille = new RecherchePopulationVilleService();
-				rechercheVille.traiter(recensement, scanner);
+				try {
+					rechercheVille.traiter(recensement, scanner);
+				} catch (ClasseException e2) {
+					//e2.printStackTrace();
+					System.err.println(e2.getMessage());
+				}
 				break;
 			
 			  case 2: RecherchePopulationDepartementService rechercheDept = new RecherchePopulationDepartementService(); 
-			  	rechercheDept.traiter(recensement,scanner); 
+			  	try {
+					rechercheDept.traiter(recensement,scanner);
+				} catch (ClasseException e1) {
+					//e1.printStackTrace();
+					System.err.println(e1.getMessage());
+				} 
 			  	break; 
 			  
 			  case 3: RecherchePopulationRegionService rechercheRegion = new RecherchePopulationRegionService(); 
-			  	rechercheRegion.traiter(recensement,scanner); 
+			  	try {
+					rechercheRegion.traiter(recensement,scanner);
+				} catch (ClasseException e1) {
+					//e1.printStackTrace();
+					System.err.println(e1.getMessage());
+				} 
 			  	break;
 			  	
 			  case 4: Recherche10RegionPlusPeupleeService rechercheRegionPlusPeuplee = new Recherche10RegionPlusPeupleeService(); 
@@ -72,11 +87,21 @@ public class Application {
 			  	break; 
 			  
 			  case 6: Recherche10VillePlusPeupleeDepartementService rechercheVillePlusPeupleeDepartement = new Recherche10VillePlusPeupleeDepartementService(); 
-			  rechercheVillePlusPeupleeDepartement.traiter(recensement,scanner); 
+				try {
+					rechercheVillePlusPeupleeDepartement.traiter(recensement,scanner);
+				} catch (ClasseException e) {
+					//e.printStackTrace();
+					System.err.println(e.getMessage());
+				} 
 			  	break;
 			  
 			  case 7: Recherche10VillePlusPeupleeRegionService rechercheVillePlusPeupleeRegion = new Recherche10VillePlusPeupleeRegionService(); 
-			  rechercheVillePlusPeupleeRegion.traiter(recensement,scanner); 
+				try {
+					rechercheVillePlusPeupleeRegion.traiter(recensement,scanner);
+				} catch (ClasseException e) {
+					//e.printStackTrace();
+					System.err.println(e.getMessage());
+				} 
 			  	break;
 			  	
 			  case 8: Recherche10VillePlusPeupleeService rechercheVillePlusPeuplee = new Recherche10VillePlusPeupleeService(); 

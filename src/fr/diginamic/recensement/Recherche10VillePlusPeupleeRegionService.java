@@ -16,12 +16,15 @@ import java.util.Scanner;
 public class Recherche10VillePlusPeupleeRegionService extends MenuService {
 
 	@Override
-	public void traiter(Recensement recensement, Scanner scanner) {
+	public void traiter(Recensement recensement, Scanner scanner) throws ClasseException {
 		
 		System.out.println("Quel est le nom de la région dont vous souhaitez avoir les 10 villes les plus peuplées ? ");
 		
 		// Recupérer le choix de l'utilisateur
 		String choix = scanner.nextLine();
+		
+		// Initialisation Boolean pour lancer une exception si l'utilisateur donne une région inconnu
+		boolean trouve = false;
 		
 		// Instanciation de la liste qui va permettre de stocker les villes d'une region donner
 		List <Ville> listVilleRegion = new ArrayList<Ville>();
@@ -29,7 +32,12 @@ public class Recherche10VillePlusPeupleeRegionService extends MenuService {
 		for (Ville ville : recensement.getListVilles()) {
 			if (ville.getNomRegion().equalsIgnoreCase(choix)) {
 				listVilleRegion.add(ville);
+				trouve = true;
 			}
+		}
+		
+		if (! trouve) {
+			throw new ClasseException("La région que vous avez saisie est incorrect");
 		}
 		
 		// Tri de la liste par ordre décroissant des villes les plus peuplées
