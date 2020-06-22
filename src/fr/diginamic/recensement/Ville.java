@@ -1,6 +1,3 @@
-/**
- * 
- */
 package fr.diginamic.recensement;
 
 /**
@@ -153,8 +150,6 @@ public class Ville {
 	 */
 	public void setPopulationTotale(int populationTotale) {
 		this.populationTotale = populationTotale;
-	}
-	
-	
+	}	
 
 }
